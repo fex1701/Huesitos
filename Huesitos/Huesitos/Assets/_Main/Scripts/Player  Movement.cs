@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float fuerzaSalto = 125f;
     [SerializeField] private bool isGround;
     [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] public Text TextScore;
+    [SerializeField] public int Score = 1;
 
     private void Awake()
     {
@@ -19,12 +21,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     // || &&
-    void  Update()
-    {
-      
-    }
-
-    private void FixedUpdate()
+    void Update()
     {
         if (Input.GetButtonDown("Jump") && isGround)
         {
@@ -32,6 +29,10 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
+    }
+
+    private void FixedUpdate()
+    {
 
         float movimientoHorizontal = Input.GetAxis("Horizontal");
         _rb2d.linearVelocity = new Vector2(movimientoHorizontal * moveSpeed, _rb2d.linearVelocity.y);
@@ -52,5 +53,15 @@ public class PlayerMovement : MonoBehaviour
             isGround = false;
         }
 
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Coin")
+        {
+            Score++;
+            TextScore.text = "Points = " + Score;
+
+
+        }
     }
 }
