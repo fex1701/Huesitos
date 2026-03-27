@@ -12,8 +12,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float fuerzaSalto = 125f;
     [SerializeField] private bool isGround;
     [SerializeField] private float moveSpeed = 5f;
-    [SerializeField] public Text TextPuntaje;
-    [SerializeField] public int Puntaje = 0;
+    [SerializeField] public Text TextScore;
+    [SerializeField] public int Score = 1;
 
     private void Awake()
     {
@@ -58,8 +58,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.tag == "Coin")
         {
-            Puntaje++;
-            TextPuntaje.text = "Puntaje : " + Puntaje;
+            Score++;
+            TextScore.text = "Points = " + Score;
 
 
         }
