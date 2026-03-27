@@ -14,21 +14,44 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] public Text TextScore;
     [SerializeField] public int Score = 1;
+    [SerializeField] private Animator animator;
 
     private void Awake()
     {
         _rb2d = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     // || &&
     void Update()
     {
         if (Input.GetButtonDown("Jump") && isGround)
+
+           
         {
             _rb2d.AddForce(Vector2.up * fuerzaSalto);
+
+            
+        }
+        
+
+        float move = Input.GetAxis("Horizontal");
+
+        animator.SetFloat("Movement", Mathf.Abs(move));
+
+        animator.SetFloat("VelocidadY", _rb2d.linearVelocity.y);
+
+
+        if (move > 0)
+        {
+            transform.localScale = new Vector3(1, 1, 1);
+        }
+        if (move < 0)
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
         }
 
-
+        
     }
 
     private void FixedUpdate()
@@ -36,6 +59,11 @@ public class PlayerMovement : MonoBehaviour
 
         float movimientoHorizontal = Input.GetAxis("Horizontal");
         _rb2d.linearVelocity = new Vector2(movimientoHorizontal * moveSpeed, _rb2d.linearVelocity.y);
+
+
+        animator.SetBool("isGround", isGround);
+
+
 
     }
     private void OnCollisionEnter2D(Collision2D collision)
