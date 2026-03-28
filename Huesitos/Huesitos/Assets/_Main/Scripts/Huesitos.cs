@@ -3,7 +3,7 @@ using UnityEngine.SocialPlatforms.Impl;
 
 public class Huesitos : MonoBehaviour
 {
-    [SerializeField] private int _Huesitos = 1;
+    [SerializeField] private int _Huesitos = 0;
     [SerializeField] public int Puntos;
     private void OnTriggerEnter2D(Collider2D collision)
     {

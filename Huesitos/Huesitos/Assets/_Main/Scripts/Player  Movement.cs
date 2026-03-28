@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private bool isGround;
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] public Text TextScore;
-    [SerializeField] public int Score = 1;
+    [SerializeField] public int Score = 0;
     [SerializeField] private Animator animator;
 
     private void Awake()
@@ -27,13 +27,13 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump") && isGround)
 
-           
+
         {
             _rb2d.AddForce(Vector2.up * fuerzaSalto);
 
-            
+
         }
-        
+
 
         float move = Input.GetAxis("Horizontal");
 
@@ -51,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
             transform.localScale = new Vector3(-1, 1, 1);
         }
 
-        
+
     }
 
     private void FixedUpdate()
@@ -86,10 +86,11 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.tag == "Coin")
         {
-            Score++;
-            TextScore.text = "Points = " + Score;
+            Score+=1;
+            TextScore.text = "Puntaje: " + Score;
 
 
         }
     }
+
 }
