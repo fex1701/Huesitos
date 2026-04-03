@@ -11,23 +11,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private IUManager IUmanager;
 
 
-
-    public void Sumarvida(int heal)
-    {
-        if (Vida < 100)
-        {
-            Vida += heal;
-            IUmanager.Colorvida(Color.green);
-
-            IUmanager.FillAmount_Colorvida(Vida / 100f);
-        }
-
-        else
-        {
-            Vida = 100;
-            Debug.Log("No curo");
-        }
-    }
     public void RestarVida(int _Damage)
 
     {
@@ -72,7 +55,5 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
-
-
+  
 }

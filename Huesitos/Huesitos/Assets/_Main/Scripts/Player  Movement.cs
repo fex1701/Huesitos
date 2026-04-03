@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
@@ -12,8 +13,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float fuerzaSalto = 125f;
     [SerializeField] private bool isGround;
     [SerializeField] private float moveSpeed = 5f;
-    [SerializeField] public Text TextScore;
-    [SerializeField] public int Score = 0;
+    [SerializeField] private TMP_Text TextScore;
+    [SerializeField] private int Score = 0;
     [SerializeField] private Animator animator;
 
     private void Awake()

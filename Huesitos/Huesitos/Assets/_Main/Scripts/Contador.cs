@@ -1,9 +1,10 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Contador : MonoBehaviour
 {
-    [SerializeField] private Text _textocontador;
+    [SerializeField] private TMP_Text _textocontador;
     [SerializeField] private int Minutos;
     [SerializeField] private float Segundos;
 

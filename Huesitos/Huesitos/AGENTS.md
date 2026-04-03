@@ -2,7 +2,7 @@
 - Project name: Huesitos
 - Unity version: Unity 6000.3.10f1
 - Active game object:
-  - Name: Contador
-  - Tag: Untagged
-  - Layer: UI
+  - Name: Llave
+  - Tag: Key
+  - Layer: Default
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->
