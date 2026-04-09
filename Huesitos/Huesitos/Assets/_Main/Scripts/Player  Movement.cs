@@ -1,11 +1,6 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.SocialPlatforms.Impl;
-using UnityEngine.UI;
+
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -24,11 +19,9 @@ public class PlayerMovement : MonoBehaviour
     }
 
     // || &&
-    void Update()
+    void Update() 
     {
         if (Input.GetButtonDown("Jump") && isGround)
-
-
         {
             _rb2d.AddForce(Vector2.up * fuerzaSalto);
 
