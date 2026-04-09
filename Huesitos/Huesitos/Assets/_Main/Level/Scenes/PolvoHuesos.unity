@@ -2478,6 +2478,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 990218432}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &332337721 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7187850843945921366, guid: a5690db1ef702c7459e79e1dfbc6d697, type: 3}
+  m_PrefabInstance: {fileID: 1779611307}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d99ea1e6c9c98041b381691f8ba46c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
 --- !u!1001 &377537466
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3990,17 +4001,6 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
---- !u!114 &624026005 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7187850843945921366, guid: a5690db1ef702c7459e79e1dfbc6d697, type: 3}
-  m_PrefabInstance: {fileID: 1779611307}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d99ea1e6c9c98041b381691f8ba46c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
 --- !u!1001 &630899052
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4149,6 +4149,10 @@ PrefabInstance:
     - target: {fileID: 5830660783279353852, guid: 22cc27a8a8a58804b9770e3aa472bfca, type: 3}
       propertyPath: m_Name
       value: Puerta
+      objectReference: {fileID: 0}
+    - target: {fileID: 7425877618749538827, guid: 22cc27a8a8a58804b9770e3aa472bfca, type: 3}
+      propertyPath: m_SortingOrder
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5473,7 +5477,7 @@ GameObject:
   - component: {fileID: 1523104519}
   - component: {fileID: 1523104518}
   m_Layer: 0
-  m_Name: Puerta de inico y de salida
+  m_Name: Puerta de incio y de salida
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5695,6 +5699,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1850164322583914630, guid: a5690db1ef702c7459e79e1dfbc6d697, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3745848070407566752, guid: a5690db1ef702c7459e79e1dfbc6d697, type: 3}
       propertyPath: m_Name
       value: 'Player '
@@ -5767,7 +5775,7 @@ PrefabInstance:
     - target: {fileID: 8891518948212781402, guid: 81147bd93e619dc4caefa28cbcf78ef9, type: 3}
       propertyPath: Jugador
       value: 
-      objectReference: {fileID: 624026005}
+      objectReference: {fileID: 332337721}
     - target: {fileID: 8891518948212781402, guid: 81147bd93e619dc4caefa28cbcf78ef9, type: 3}
       propertyPath: IUmanager
       value: 
