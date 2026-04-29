@@ -1,11 +1,13 @@
+using TMPro;
 using UnityEngine;
 
 public class Switch : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [SerializeField] private TMP_Text DialogoText;
+
     void Start()
     {
-     
+
     }
 
     // Update is called once per frame
@@ -21,10 +23,23 @@ public class Switch : MonoBehaviour
 
     }
     public void EstadosDelJuego(int numero)
-    {
+    { 
+
         switch (numero)
-            {
+        {
             case 0:
-         
-    } 
+               DialogoText.text = "Bien hecho, estableciste una conversacion con ella toda la tarde";
+                break;
+            case 1:
+                DialogoText.text = "Ella se fue a su casa y tu te quedaste con la duda de que hubiera pasado si le hablabas";
+                break;
+            case 2:
+                DialogoText.text = "Ella se da cuenta de lo que intentas y te dice: ¡Acosador!";
+                break;
+            case 3: 
+                DialogoText.text = "Bien hecho, ahora eres Nicolas y te fuiste a buscar un chocolatito ";
+                break ;
+
+        }
+    }
 }
