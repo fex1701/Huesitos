@@ -5,7 +5,7 @@ public class SpriteCharacterController : MonoBehaviour
 
     [Header("Sprite Renderers")]    
     [SerializeField]
-    private SpriteRenderer _mainRender;
+    private Sprite _mainRender;
 
     [SerializeField]
     private SpriteRenderer _hairRender;
@@ -38,5 +38,32 @@ public class SpriteCharacterController : MonoBehaviour
 
     [SerializeField] Sprite _mainSprite;
 
+
+    [SerializeField]
+     Sprite _hairSprite;
+
+    [SerializeField]
+     Sprite _tearsSprite;
+
+    [SerializeField]
+    Sprite _mouthSprite;
+
+    [SerializeField]
+    Sprite _graphic_symbolsSprite;
+
+    [SerializeField]
+    Sprite _whiteSprite;
+
+    [SerializeField]
+    Sprite _eyedilsSprite;
+
+    [SerializeField]
+    Sprite _pupilSprite;
+
+    [SerializeField]
+    Sprite _eyebrowsSprite;
+
+    [SerializeField]
+    Sprite _cheeksSprite;
 
 }

@@ -1336,17 +1336,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c0b54a8cb509454394f697dc540f4e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpriteCharacterController
-  _mainRender: {fileID: 0}
-  _hairRender: {fileID: 0}
-  _tearsRender: {fileID: 0}
-  _mouthRender: {fileID: 0}
-  _graphic_symbolsRender: {fileID: 0}
-  _whiteRender: {fileID: 0}
-  _eyedilsRender: {fileID: 0}
-  _pupilRender: {fileID: 0}
-  _eyebrowsRender: {fileID: 0}
-  _cheeksRender: {fileID: 0}
-  _mainSprite: {fileID: 0}
+  _mainRender: {fileID: 21300000, guid: 1f37e1c070e8faf45af2930401c2f10a, type: 3}
+  _hairRender: {fileID: 350346545}
+  _tearsRender: {fileID: 1462780325}
+  _mouthRender: {fileID: 850554691}
+  _graphic_symbolsRender: {fileID: 500063958}
+  _whiteRender: {fileID: 1419744258}
+  _eyedilsRender: {fileID: 1411065458}
+  _pupilRender: {fileID: 402436436}
+  _eyebrowsRender: {fileID: 202937256}
+  _cheeksRender: {fileID: 1565745585}
+  _mainSprite: {fileID: 21300000, guid: 1f37e1c070e8faf45af2930401c2f10a, type: 3}
+  _hairSprite: {fileID: 21300000, guid: 27b14de2c141cfa428137c7d5e1126a5, type: 3}
+  _tearsSprite: {fileID: 21300000, guid: 847a8bea82d55c44f9cde031664fa653, type: 3}
+  _mouthSprite: {fileID: 21300000, guid: 13e8c683bec04894c85b204aba044298, type: 3}
+  _graphic_symbolsSprite: {fileID: 21300000, guid: 1e7a955ff4c9e4d4da71a64f2514b2fe, type: 3}
+  _whiteSprite: {fileID: 21300000, guid: bc2abbddb9dfdf84fb76d90007ec02ab, type: 3}
+  _eyedilsSprite: {fileID: 21300000, guid: 7d6352b6418b5a442bbad36ac38a1fca, type: 3}
+  _pupilSprite: {fileID: 21300000, guid: 2c1e7937109710344b33def1459a4dcf, type: 3}
+  _eyebrowsSprite: {fileID: 21300000, guid: 23d8706aaf3f4504f9d5778b45174f3a, type: 3}
+  _cheeksSprite: {fileID: 21300000, guid: df7829644d2f5864bb25b7557a4409c0, type: 3}
 --- !u!1 &1859770238
 GameObject:
   m_ObjectHideFlags: 0
