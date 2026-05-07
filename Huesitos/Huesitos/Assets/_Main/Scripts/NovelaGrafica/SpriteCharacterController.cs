@@ -1,69 +1,58 @@
+using UnityEditor.Rendering;
 using UnityEngine;
 
 public class SpriteCharacterController : MonoBehaviour
 {
 
-    [Header("Sprite Renderers")]    
-    [SerializeField]
-    private Sprite _mainRender;
+    [Header("Array SpriteRender")]
 
     [SerializeField]
-    private SpriteRenderer _hairRender;
-
-    [SerializeField]
-    private SpriteRenderer _tearsRender;
-
-    [SerializeField]
-    private SpriteRenderer _mouthRender;
-
-    [SerializeField]
-    private SpriteRenderer _graphic_symbolsRender;
-
-    [SerializeField]
-    private SpriteRenderer _whiteRender;
-
-    [SerializeField]
-    private SpriteRenderer _eyedilsRender;
-
-    [SerializeField] 
-    private SpriteRenderer _pupilRender;
-
-    [SerializeField]
-    private SpriteRenderer _eyebrowsRender;
-
-    [SerializeField]
-    private SpriteRenderer _cheeksRender;
+    private SpriteRenderer[] spriteRenderers;
 
     [Header("Sprite")]
 
-    [SerializeField] Sprite _mainSprite;
+    [SerializeField]
+    private Sprite _mainSprite;
 
 
     [SerializeField]
-     Sprite _hairSprite;
+    private Sprite _hairSprite;
 
     [SerializeField]
-     Sprite _tearsSprite;
+    private Sprite _whiteSprite;
+
+   
+
+
+
+    [Header ("Array Sprite")]
+    [SerializeField]
+    private Sprite[] _tearsSprites;
 
     [SerializeField]
-    Sprite _mouthSprite;
+    private Sprite[] _mouthSprites;
 
     [SerializeField]
-    Sprite _graphic_symbolsSprite;
+    private Sprite[] _graphicSprites;
 
     [SerializeField]
-    Sprite _whiteSprite;
+    private Sprite[] _eyedilsSprites;
 
     [SerializeField]
-    Sprite _eyedilsSprite;
+    private Sprite[] _pupilSprites;
 
     [SerializeField]
-    Sprite _pupilSprite;
+    private Sprite[] _eyebrowsSprites;
 
     [SerializeField]
-    Sprite _eyebrowsSprite;
+    private Sprite[] _cheeksSprites;
 
-    [SerializeField]
-    Sprite _cheeksSprite;
 
+
+
+
+    private void Start()
+    {
+        
+    }
 }
