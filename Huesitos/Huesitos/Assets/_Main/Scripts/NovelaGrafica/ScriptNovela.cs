@@ -1,24 +1,19 @@
 using UnityEngine;
 
-public class Swicht : MonoBehaviour
+public class NewMonoBehaviourScript : MonoBehaviour
 {
+
     [SerializeField] private TMPro.TMP_Text Dialogotexto;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        //crearemos un metodo que nos permita cambiar los estados del juego 
-        //pausa
-        //salir
-        //reiniciar
-        //perder
-        //play
-        //
+        
     }
 
     public void EstadosDelJuego(int numero)
@@ -26,12 +21,12 @@ public class Swicht : MonoBehaviour
         switch (numero)
         {
             case 0:
-                Dialogotexto.text = "eres pendejo porque ño?";
+                Dialogotexto.text = "eres un mal amigo, porque no?";
                 break;
             case 1:
                 Dialogotexto.text = "Dale espera a que regrese mi internet y jugamos";
                 break;
-            case 2: 
+            case 2:
                 Dialogotexto.text = "No w mas tarde viene mi novia";
                 break;
 
@@ -43,5 +38,3 @@ public class Swicht : MonoBehaviour
         }
     }
 }
-
-
