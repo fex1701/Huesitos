@@ -3,9 +3,13 @@ using System.Xml.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEditor.Rendering.MaterialUpgrader;
 
 public class GameManager : MonoBehaviour
+
 {
+    [SerializeField] private TMP_Text DialogoText;
+    /*
     [SerializeField] private int Vida = 100;
     [SerializeField] private PlayerMovement Jugador;
     [SerializeField] private IUManager IUmanager;
@@ -55,5 +59,18 @@ public class GameManager : MonoBehaviour
         }
     }
 
-  
+  */
+
+    public void EscenaIntro(string escena)
+    {
+
+        switch (escena)
+        {
+           
+
+        }
+
+    }
 }
+
+

@@ -1,7 +1,7 @@
 using UnityEngine;
 public class Daño : MonoBehaviour
 {
-    [SerializeField] private GameManager gameManager;
+    /*[SerializeField] private GameManager gameManager;
     [SerializeField] private int _Damage;
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -10,7 +10,7 @@ public class Daño : MonoBehaviour
             gameManager.RestarVida(_Damage);
         }
 
-    }
+    }*/
 
 
 }
