@@ -2,6 +2,7 @@
 
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Switch : MonoBehaviour
 {
@@ -36,11 +37,8 @@ public class Switch : MonoBehaviour
                 DialogoText.text = "Ella se fue a su casa y tu te quedaste con la duda de que hubiera pasado si le hablabas";
                 break;
             case 2:
-                DialogoText.text = "Ella se da cuenta de lo que intentas y te dice: ¡Acosador!";
+                DialogoText.text = "Ella se da cuenta de lo que intentas y te dice: ¡Acosador!";  
                 break;
-            case 3: 
-                DialogoText.text = "Bien hecho, ahora eres Nicolas y te fuiste a buscar un chocolatito ";
-                break ;
 
         }
     }

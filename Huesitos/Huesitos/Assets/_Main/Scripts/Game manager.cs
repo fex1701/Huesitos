@@ -2,13 +2,14 @@ using System;
 using System.Xml.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using static UnityEditor.Rendering.MaterialUpgrader;
 
 public class GameManager : MonoBehaviour
 
 {
-    [SerializeField] private TMP_Text DialogoText;
+
     /*
     [SerializeField] private int Vida = 100;
     [SerializeField] private PlayerMovement Jugador;
@@ -61,16 +62,54 @@ public class GameManager : MonoBehaviour
 
   */
 
-    public void EscenaIntro(string escena)
+    public void Escenas(int escena)
     {
 
         switch (escena)
         {
-           
 
+            case 1:
+                SceneManager.LoadScene("Assets/_Main/Level/Scenes/Introduccion.unity");
+                break;
+
+            case 2:
+                int escenaActual = SceneManager.GetActiveScene().buildIndex;
+
+                SceneManager.LoadScene(escenaActual + 1);
+                break;
+            case 3:
+                SceneManager.LoadScene("Assets/_Main/Level/Scenes/Menu.unity");
+                break;
+
+
+        }
+
+
+    }
+    private void Start()
+    {
+        
+    }
+
+
+    public void Finales(int Finales)
+
+    {
+        switch (Finales)
+        {
+            case 1:
+                SceneManager.LoadScene("Assets/_Main/Level/Scenes/FinalBueno.unity");
+                break;
+            case 2:
+                SceneManager.LoadScene("Assets/_Main/Level/Scenes/FinalMalo.unity");
+              
+                break;
+            case 3:
+                SceneManager.LoadScene("Assets/_Main/Level/Scenes/FinalNuetral.unity");
+               
+                break;
         }
 
     }
 }
-
 
