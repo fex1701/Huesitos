@@ -1,5 +1,5 @@
 using UnityEngine;
-using TMPro;    
+using TMPro;
 public class UIManager : MonoBehaviour
 {
     [SerializeField]
@@ -13,13 +13,17 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private TMP_Text[] _textButton;
 
+    
+
     private void Start()
     {
         _textDialogo.text = "Te encuentras a una persona misteriosa, parece que la has asustado.";
+        _textButton[0].text = "Saludar";
+        _textButton[1].text = "Ignorar";
+        _textButton[2].text = "Gritar";
+        _textButton[3].text = "Atacar";
     }
 
-    private void Update()
-    {
-        
-    }
+   
+
 }

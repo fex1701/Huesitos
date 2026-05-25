@@ -428,9 +428,10 @@ MonoBehaviour:
   panelDialogo: {fileID: 201704100}
   _textDialogo: {fileID: 230210486}
   _textButton:
-  - {fileID: 638102312}
-  - {fileID: 910314910}
   - {fileID: 1963537147}
+  - {fileID: 910314910}
+  - {fileID: 1690929627}
+  - {fileID: 638102312}
 --- !u!4 &569966294
 Transform:
   m_ObjectHideFlags: 0
@@ -1475,6 +1476,17 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1690929627 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8843819535682614585, guid: be5c6f1bec5216740b16e3c8cd5d7e2b, type: 3}
+  m_PrefabInstance: {fileID: 8579235988516881092}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1 &1704449425
 GameObject:
   m_ObjectHideFlags: 0
@@ -1759,7 +1771,7 @@ GameObject:
   - component: {fileID: 1854376974}
   - component: {fileID: 1854376975}
   m_Layer: 0
-  m_Name: Gamemanager
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1774,7 +1786,7 @@ Transform:
   m_GameObject: {fileID: 1854376973}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.16797, y: -1.18759, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1993,10 +2005,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 737247158}
     m_Modifications:
+    - target: {fileID: 221973279449437397, guid: be5c6f1bec5216740b16e3c8cd5d7e2b, type: 3}
+      propertyPath: m_Name
+      value: Button 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1584609410664910056, guid: be5c6f1bec5216740b16e3c8cd5d7e2b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 346973484}
+    - target: {fileID: 1605534710600216971, guid: be5c6f1bec5216740b16e3c8cd5d7e2b, type: 3}
+      propertyPath: m_Name
+      value: Button 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2078796617077130910, guid: be5c6f1bec5216740b16e3c8cd5d7e2b, type: 3}
       propertyPath: m_Type
       value: 0
@@ -2008,6 +2028,10 @@ PrefabInstance:
     - target: {fileID: 2078796617077130910, guid: be5c6f1bec5216740b16e3c8cd5d7e2b, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4253710241521485313, guid: be5c6f1bec5216740b16e3c8cd5d7e2b, type: 3}
+      propertyPath: m_Name
+      value: Button 0
       objectReference: {fileID: 0}
     - target: {fileID: 4333413278826467521, guid: be5c6f1bec5216740b16e3c8cd5d7e2b, type: 3}
       propertyPath: m_Name
@@ -2105,6 +2129,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 346973484}
+    - target: {fileID: 8906068764500135468, guid: be5c6f1bec5216740b16e3c8cd5d7e2b, type: 3}
+      propertyPath: m_Name
+      value: Button 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

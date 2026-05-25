@@ -22,9 +22,12 @@ public class Swicht : MonoBehaviour
     }
 
     public void EstadosDelJuego(int numero)
+
     {
         switch (numero)
         {
+
+
             case 0:
                 Dialogotexto.text = "eres un mal amigo, porque no?";
                 break;
