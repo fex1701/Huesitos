@@ -12,15 +12,15 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        EscenaIntro();
+        //EscenaIntro();
     }
 
     public void EscenaIntro(string Escena)
     {
         string escena2;
-        switch (switch_on)
+        //switch (switch_on)
         {
-            default:
+            //default:
         }
     }
 }
