@@ -1,64 +1,71 @@
-using System;
-using Unity.VisualScripting;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
-public class IUManager : MonoBehaviour
+public class UIManager : MonoBehaviour
 {
+    [Header("Nodo")]
     [SerializeField]
-    private GameObject _PanelDialogo;
-    [SerializeField] private TMP_Text _TextDialogo;
+    private VisualNovelNodeSO _node;
 
-    [Header("texto de los botones")]
-    [SerializeField] private TMP_Text[] _TextButton;
+    [Header("Texto diálogo")]
+    [SerializeField]
+    private TMP_Text _dialogueText;
 
+    [Header("Botones")]
+    [SerializeField]
+    private Button[] _buttons;
+
+    [Header("Texto botones")]
+    [SerializeField]
+    private TMP_Text[] _buttonTexts;
 
     private void Start()
     {
-
-        string EscenaActual = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
-
-        switch (EscenaActual)
-        {
-            case "Introduccion":
-                _TextDialogo.text = "Es un dia soleado acabaste de salir de casa y esta de camino a la universidad ";
-                _TextButton[0].text = "Salir";
-                _TextButton[1].text = "Siguiente";
-                break;
-
-            case "Desarrollo":
-                _TextDialogo.text = "Llegas a la universidad y cuando estas de camino a tu salon te encuentras con tu crush ¿que vas hacer?";
-                _TextButton[0].text = "Ignorarla";
-                _TextButton[1].text = "Hablarle";
-                _TextButton[2].text = "Besarla";
-                _TextButton[3].text = "Salir";
-                _TextButton[4].text = "Siguente";
-                break;
-
-            case "FinalBueno":
-                _TextDialogo.text = "Pasas una Tarde agradable con ella :D";
-                _TextButton[0].text = "Salir";
-                break;
-
-
-            case "FinalNeutral":
-                _TextDialogo.text = "No sucede nada entre ella y tu :/";
-                _TextButton[0].text = "Salir";
-                break;
-
-            case "FinalMalo":
-                _TextDialogo.text = "Terminas siendo denunciado por acaso :(";
-                _TextButton[0].text = "Salir";
-                break;
-
-
-        }
-
+        LoadNode();
     }
-    private void Update()
+
+    private void LoadNode()
     {
+        // TEXTO PRINCIPAL
+        _dialogueText.text = _node.sceneText;
 
+        // ACTIVAR BOTONES
+        for (int i = 0; i < _buttons.Length; i++)
+        {
+            bool showButton = i < _node.buttonAmount;
 
+            _buttons[i].gameObject.SetActive(showButton);
+
+            if (showButton)
+            {
+                // TEXTO BOTÓN
+                _buttonTexts[i].text = _node.buttonNames[i];
+
+                // GUARDAR ÍNDICE
+                int index = i;
+
+                // LIMPIAR EVENTOS
+                _buttons[i].onClick.RemoveAllListeners();
+
+                // AGREGAR EVENTO
+                _buttons[i].onClick.AddListener(() =>
+                {
+                    SelectFinal(index);
+                });
+            }
+        }
+    }
+
+    private void SelectFinal(int index)
+    {
+        // CAMBIAR TEXTO
+        _dialogueText.text = _node.finalTexts[index];
+
+        // DESAPARECER BOTONES
+        for (int i = 0; i < _buttons.Length; i++)
+        {
+            _buttons[i].gameObject.SetActive(false);
+        }
     }
 }

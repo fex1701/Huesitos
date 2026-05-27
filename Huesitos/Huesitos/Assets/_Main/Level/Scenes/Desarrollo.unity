@@ -3784,6 +3784,10 @@ PrefabInstance:
       value: IU Manager
       objectReference: {fileID: 0}
     - target: {fileID: 9053300327184012277, guid: c7219dcf3b3e97b41b693b2a5da26518, type: 3}
+      propertyPath: _node
+      value: 
+      objectReference: {fileID: 11400000, guid: 856a7d6fd7c5e654393c2091413b4f78, type: 2}
+    - target: {fileID: 9053300327184012277, guid: c7219dcf3b3e97b41b693b2a5da26518, type: 3}
       propertyPath: _TextDialogo
       value: 
       objectReference: {fileID: 922023394}
@@ -3792,8 +3796,32 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2085817663}
     - target: {fileID: 9053300327184012277, guid: c7219dcf3b3e97b41b693b2a5da26518, type: 3}
+      propertyPath: _dialogueText
+      value: 
+      objectReference: {fileID: 922023394}
+    - target: {fileID: 9053300327184012277, guid: c7219dcf3b3e97b41b693b2a5da26518, type: 3}
+      propertyPath: _buttons.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9053300327184012277, guid: c7219dcf3b3e97b41b693b2a5da26518, type: 3}
       propertyPath: _TextButton.Array.size
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9053300327184012277, guid: c7219dcf3b3e97b41b693b2a5da26518, type: 3}
+      propertyPath: '_buttons.Array.data[0]'
+      value: 
+      objectReference: {fileID: 31206149}
+    - target: {fileID: 9053300327184012277, guid: c7219dcf3b3e97b41b693b2a5da26518, type: 3}
+      propertyPath: '_buttons.Array.data[1]'
+      value: 
+      objectReference: {fileID: 191080345}
+    - target: {fileID: 9053300327184012277, guid: c7219dcf3b3e97b41b693b2a5da26518, type: 3}
+      propertyPath: '_buttons.Array.data[2]'
+      value: 
+      objectReference: {fileID: 183702292}
+    - target: {fileID: 9053300327184012277, guid: c7219dcf3b3e97b41b693b2a5da26518, type: 3}
+      propertyPath: _buttonTexts.Array.size
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9053300327184012277, guid: c7219dcf3b3e97b41b693b2a5da26518, type: 3}
       propertyPath: '_TextButton.Array.data[0]'
@@ -3815,6 +3843,18 @@ PrefabInstance:
       propertyPath: '_TextButton.Array.data[4]'
       value: 
       objectReference: {fileID: 5733737504778744276}
+    - target: {fileID: 9053300327184012277, guid: c7219dcf3b3e97b41b693b2a5da26518, type: 3}
+      propertyPath: '_buttonTexts.Array.data[0]'
+      value: 
+      objectReference: {fileID: 117344755}
+    - target: {fileID: 9053300327184012277, guid: c7219dcf3b3e97b41b693b2a5da26518, type: 3}
+      propertyPath: '_buttonTexts.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1497559441}
+    - target: {fileID: 9053300327184012277, guid: c7219dcf3b3e97b41b693b2a5da26518, type: 3}
+      propertyPath: '_buttonTexts.Array.data[2]'
+      value: 
+      objectReference: {fileID: 595373129}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
