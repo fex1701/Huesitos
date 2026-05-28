@@ -1,65 +1,88 @@
-using System;
-using System.Xml.Linq;
-using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
-using static UnityEditor.Rendering.MaterialUpgrader;
 
 public class GameManager : MonoBehaviour
-
 {
+    [Header("Nodo actual")]
+    [SerializeField]
+    private VisualNovelNodeSO currentNode;
 
-    /*
-    [SerializeField] private int Vida = 100;
-    [SerializeField] private PlayerMovement Jugador;
-    [SerializeField] private IUManager IUmanager;
+    [Header("UI")]
+    [SerializeField]
+    private UIManager uiManager;
 
+    [Header("Personaje Izquierdo")]
+    [SerializeField]
+    private SpriteCharacterController leftCharacter;
 
-    public void RestarVida(int _Damage)
+    [Header("Personaje Derecho")]
+    [SerializeField]
+    private SpriteCharacterController rightCharacter;
 
+    private void Start()
     {
-        if (Vida > 0)
-
-        {
-
-
-            Vida -= _Damage;
-            IUmanager.Colorvida(Color.red);
-            Debug.Log(" restar " + _Damage + " puntos de vida ");
-            IUmanager.FillAmount_Colorvida(Vida / 100f);
-
-        }
-
-        if (Vida <= 0)
-        {
-            Destroy(Jugador.gameObject);
-            Debug.Log("Se muriooo");
-        }
-        if (Vida >= 80)
-        {
-            IUmanager.Colorvida(Color.green);
-        }
-
-        if (Vida < 80)
-
-        {
-            IUmanager.Colorvida(Color.orange);
-
-        }
-
-        if (Vida == 20)
-        {
-
-            IUmanager.Colorvida(Color.orange);
-        }
-
-        if (Vida < 20)
-        {
-            IUmanager.Colorvida(Color.darkRed);
-        }
+        LoadNode(currentNode);
     }
 
-  */
+    public void LoadNode(VisualNovelNodeSO node)
+    {
+        currentNode = node;
 
+        // TEXTO
+        uiManager.SetDialogue(node.sceneText);
+
+        // =========================
+        // LEFT CHARACTER
+        // =========================
+
+        if (node.useLeftCharacter)
+        {
+            leftCharacter.gameObject.SetActive(true);
+
+            leftCharacter.ApplyCharacter(
+                node.leftCharacterExpression
+            );
+        }
+        else
+        {
+            leftCharacter.gameObject.SetActive(false);
+        }
+
+        // =========================
+        // RIGHT CHARACTER
+        // =========================
+
+        if (node.useRightCharacter)
+        {
+            rightCharacter.gameObject.SetActive(true);
+
+            rightCharacter.ApplyCharacter(
+                node.rightCharacterExpression
+            );
+        }
+        else
+        {
+            rightCharacter.gameObject.SetActive(false);
+        }
+
+        // =========================
+        // BOTONES
+        // =========================
+
+        uiManager.SetupButtons(node.choices, NextNode);
+    }
+
+    private void NextNode(int index)
+    {
+        VisualNovelNodeSO nextNode =
+            currentNode.choices[index].nextNode;
+
+        if (nextNode != null)
+        {
+            LoadNode(nextNode);
+        }
+        else
+        {
+            uiManager.HideButtons();
+        }
+    }
 }

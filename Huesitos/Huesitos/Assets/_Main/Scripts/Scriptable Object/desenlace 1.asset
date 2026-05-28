@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb94fee521f5e94bb84af04e5abaf6c, type: 3}
+  m_Name: desenlace 1
+  m_EditorClassIdentifier: Assembly-CSharp::VisualNovelNodeSO
+  sceneText: 'Ella no se esperaba ese beso pero igual le gusto te mira con ojos tiernos
+    y te dice adios mientras se va a clase  '
+  useLeftCharacter: 1
+  leftCharacterExpression: {fileID: 11400000, guid: 6638e6183a289b5468b5f8fccf901bd5, type: 2}
+  useRightCharacter: 1
+  rightCharacterExpression: {fileID: 11400000, guid: 949ee4ad2dfd22d4cb469dbadfb4293d, type: 2}
+  choices: []

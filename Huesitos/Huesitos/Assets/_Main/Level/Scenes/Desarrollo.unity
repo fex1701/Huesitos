@@ -402,9 +402,6 @@ MonoBehaviour:
   - {fileID: 274726005}
   - {fileID: 1154909411}
   - {fileID: 1748697935}
-  _mainSprite: {fileID: 21300000, guid: 1f37e1c070e8faf45af2930401c2f10a, type: 3}
-  _hairSprite: {fileID: 21300000, guid: 27b14de2c141cfa428137c7d5e1126a5, type: 3}
-  _whiteSprite: {fileID: 21300000, guid: bc2abbddb9dfdf84fb76d90007ec02ab, type: 3}
   _tearsSprites:
   - {fileID: 21300000, guid: 847a8bea82d55c44f9cde031664fa653, type: 3}
   - {fileID: 21300000, guid: cab5f176295bc614d86b7b9a998b0e1b, type: 3}
@@ -1901,6 +1898,17 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &826571328 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9053300327184012277, guid: c7219dcf3b3e97b41b693b2a5da26518, type: 3}
+  m_PrefabInstance: {fileID: 154966461932692118}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad950abf06719fd4ca53ffeb92099e72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IUManager
 --- !u!114 &922023394 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7156813925986469910, guid: 9bd5d6c62090cdf44a0c62a0afdab087, type: 3}
@@ -3580,9 +3588,6 @@ MonoBehaviour:
   - {fileID: 418237314}
   - {fileID: 115447779}
   - {fileID: 1774991480}
-  _mainSprite: {fileID: 21300000, guid: 5489fbae07e840a4ba0a58ccd4ed7362, type: 3}
-  _hairSprite: {fileID: 21300000, guid: d1b247e64a3e69e4490b9a3d093a3d56, type: 3}
-  _whiteSprite: {fileID: 21300000, guid: 5cfc1891a45bb984da60fe245075573c, type: 3}
   _tearsSprites:
   - {fileID: 21300000, guid: f0277ee7e1f788c47bff8b7303c56efb, type: 3}
   - {fileID: 21300000, guid: b372965fcdc837740aa64e3a060b9c13, type: 3}
@@ -3792,6 +3797,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 922023394}
     - target: {fileID: 9053300327184012277, guid: c7219dcf3b3e97b41b693b2a5da26518, type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 922023394}
+    - target: {fileID: 9053300327184012277, guid: c7219dcf3b3e97b41b693b2a5da26518, type: 3}
       propertyPath: _PanelDialogo
       value: 
       objectReference: {fileID: 2085817663}
@@ -3800,9 +3809,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 922023394}
     - target: {fileID: 9053300327184012277, guid: c7219dcf3b3e97b41b693b2a5da26518, type: 3}
+      propertyPath: buttons.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9053300327184012277, guid: c7219dcf3b3e97b41b693b2a5da26518, type: 3}
       propertyPath: _buttons.Array.size
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 9053300327184012277, guid: c7219dcf3b3e97b41b693b2a5da26518, type: 3}
+      propertyPath: 'buttons.Array.data[0]'
+      value: 
+      objectReference: {fileID: 31206149}
+    - target: {fileID: 9053300327184012277, guid: c7219dcf3b3e97b41b693b2a5da26518, type: 3}
+      propertyPath: 'buttons.Array.data[1]'
+      value: 
+      objectReference: {fileID: 191080345}
+    - target: {fileID: 9053300327184012277, guid: c7219dcf3b3e97b41b693b2a5da26518, type: 3}
+      propertyPath: 'buttons.Array.data[2]'
+      value: 
+      objectReference: {fileID: 183702292}
     - target: {fileID: 9053300327184012277, guid: c7219dcf3b3e97b41b693b2a5da26518, type: 3}
       propertyPath: _TextButton.Array.size
       value: 5
@@ -3819,6 +3844,10 @@ PrefabInstance:
       propertyPath: '_buttons.Array.data[2]'
       value: 
       objectReference: {fileID: 183702292}
+    - target: {fileID: 9053300327184012277, guid: c7219dcf3b3e97b41b693b2a5da26518, type: 3}
+      propertyPath: buttonTexts.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 9053300327184012277, guid: c7219dcf3b3e97b41b693b2a5da26518, type: 3}
       propertyPath: _buttonTexts.Array.size
       value: 3
@@ -3843,6 +3872,18 @@ PrefabInstance:
       propertyPath: '_TextButton.Array.data[4]'
       value: 
       objectReference: {fileID: 5733737504778744276}
+    - target: {fileID: 9053300327184012277, guid: c7219dcf3b3e97b41b693b2a5da26518, type: 3}
+      propertyPath: 'buttonTexts.Array.data[0]'
+      value: 
+      objectReference: {fileID: 117344755}
+    - target: {fileID: 9053300327184012277, guid: c7219dcf3b3e97b41b693b2a5da26518, type: 3}
+      propertyPath: 'buttonTexts.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1497559441}
+    - target: {fileID: 9053300327184012277, guid: c7219dcf3b3e97b41b693b2a5da26518, type: 3}
+      propertyPath: 'buttonTexts.Array.data[2]'
+      value: 
+      objectReference: {fileID: 595373129}
     - target: {fileID: 9053300327184012277, guid: c7219dcf3b3e97b41b693b2a5da26518, type: 3}
       propertyPath: '_buttonTexts.Array.data[0]'
       value: 
@@ -3969,6 +4010,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8983344838050842820, guid: a79ba3ba36265d2409e1ae51ef729c50, type: 3}
+      propertyPath: uiManager
+      value: 
+      objectReference: {fileID: 826571328}
+    - target: {fileID: 8983344838050842820, guid: a79ba3ba36265d2409e1ae51ef729c50, type: 3}
+      propertyPath: currentNode
+      value: 
+      objectReference: {fileID: 11400000, guid: 856a7d6fd7c5e654393c2091413b4f78, type: 2}
+    - target: {fileID: 8983344838050842820, guid: a79ba3ba36265d2409e1ae51ef729c50, type: 3}
+      propertyPath: characterOne
+      value: 
+      objectReference: {fileID: 34892532}
+    - target: {fileID: 8983344838050842820, guid: a79ba3ba36265d2409e1ae51ef729c50, type: 3}
+      propertyPath: characterTwo
+      value: 
+      objectReference: {fileID: 1992603321}
+    - target: {fileID: 8983344838050842820, guid: a79ba3ba36265d2409e1ae51ef729c50, type: 3}
+      propertyPath: leftCharacter
+      value: 
+      objectReference: {fileID: 34892532}
+    - target: {fileID: 8983344838050842820, guid: a79ba3ba36265d2409e1ae51ef729c50, type: 3}
+      propertyPath: rightCharacter
+      value: 
+      objectReference: {fileID: 1992603321}
     - target: {fileID: 9082667164616841819, guid: a79ba3ba36265d2409e1ae51ef729c50, type: 3}
       propertyPath: m_Name
       value: GameManager

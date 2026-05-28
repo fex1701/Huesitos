@@ -10,13 +10,28 @@ public class VisualNovelNodeSO : ScriptableObject
     [TextArea(3, 8)]
     public string sceneText;
 
-    [Header("Botones")]
-    [Range(0, 3)]
-    public int buttonAmount;
+    // =========================
+    // PERSONAJE IZQUIERDO
+    // =========================
 
-    public string[] buttonNames = new string[3];
+    [Header("Left Character")]
+    public bool useLeftCharacter;
 
-    [Header("Textos finales")]
-    [TextArea(2, 5)]
-    public string[] finalTexts = new string[3];
+    public CharacterSO leftCharacterExpression;
+
+    // =========================
+    // PERSONAJE DERECHO
+    // =========================
+
+    [Header("Right Character")]
+    public bool useRightCharacter;
+
+    public CharacterSO rightCharacterExpression;
+
+    // =========================
+    // CHOICES
+    // =========================
+
+    [Header("Choices")]
+    public Choice[] choices;
 }

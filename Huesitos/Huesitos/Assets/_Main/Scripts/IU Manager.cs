@@ -4,68 +4,66 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    [Header("Nodo")]
-    [SerializeField]
-    private VisualNovelNodeSO _node;
-
     [Header("Texto diálogo")]
     [SerializeField]
-    private TMP_Text _dialogueText;
+    private TMP_Text dialogueText;
 
     [Header("Botones")]
     [SerializeField]
-    private Button[] _buttons;
+    private Button[] buttons;
 
     [Header("Texto botones")]
     [SerializeField]
-    private TMP_Text[] _buttonTexts;
+    private TMP_Text[] buttonTexts;
 
-    private void Start()
+    // =========================
+    // CAMBIAR TEXTO
+    // =========================
+
+    public void SetDialogue(string text)
     {
-        LoadNode();
+        dialogueText.text = text;
     }
 
-    private void LoadNode()
+    // =========================
+    // CONFIGURAR BOTONES
+    // =========================
+
+    public void SetupButtons(Choice[] choices, System.Action<int> callback)
     {
-        // TEXTO PRINCIPAL
-        _dialogueText.text = _node.sceneText;
-
-        // ACTIVAR BOTONES
-        for (int i = 0; i < _buttons.Length; i++)
+        for (int i = 0; i < buttons.Length; i++)
         {
-            bool showButton = i < _node.buttonAmount;
-
-            _buttons[i].gameObject.SetActive(showButton);
-
-            if (showButton)
+            if (i < choices.Length)
             {
-                // TEXTO BOTÓN
-                _buttonTexts[i].text = _node.buttonNames[i];
+                buttons[i].gameObject.SetActive(true);
 
-                // GUARDAR ÍNDICE
+                buttonTexts[i].text = choices[i].buttonText;
+
                 int index = i;
 
-                // LIMPIAR EVENTOS
-                _buttons[i].onClick.RemoveAllListeners();
+                buttons[i].onClick.RemoveAllListeners();
 
-                // AGREGAR EVENTO
-                _buttons[i].onClick.AddListener(() =>
+                buttons[i].onClick.AddListener(() =>
                 {
-                    SelectFinal(index);
+                    callback(index);
                 });
+            }
+            else
+            {
+                buttons[i].gameObject.SetActive(false);
             }
         }
     }
 
-    private void SelectFinal(int index)
-    {
-        // CAMBIAR TEXTO
-        _dialogueText.text = _node.finalTexts[index];
+    // =========================
+    // OCULTAR BOTONES
+    // =========================
 
-        // DESAPARECER BOTONES
-        for (int i = 0; i < _buttons.Length; i++)
+    public void HideButtons()
+    {
+        for (int i = 0; i < buttons.Length; i++)
         {
-            _buttons[i].gameObject.SetActive(false);
+            buttons[i].gameObject.SetActive(false);
         }
     }
 }

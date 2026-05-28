@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb94fee521f5e94bb84af04e5abaf6c, type: 3}
+  m_Name: Introduccion
+  m_EditorClassIdentifier: Assembly-CSharp::VisualNovelNodeSO
+  sceneText: "Es una ma\xF1ana  brillante y vas a a la universidad, de camino a ella
+    te encuentras con tu crush "
+  useLeftCharacter: 1
+  leftCharacterExpression: {fileID: 11400000, guid: 728741b4e9a71704bbd1bf3fe6e7c9c9, type: 2}
+  useRightCharacter: 1
+  rightCharacterExpression: {fileID: 11400000, guid: 5129f8b6110f22f468a82a37d56d8828, type: 2}
+  choices:
+  - buttonText: Ignorarla
+    nextNode: {fileID: 11400000, guid: e26d96ab4786dd3408e5b0c6e2a41b6a, type: 2}
+  - buttonText: 'Hablarle '
+    nextNode: {fileID: 11400000, guid: e26d96ab4786dd3408e5b0c6e2a41b6a, type: 2}
+  - buttonText: Besarla
+    nextNode: {fileID: 11400000, guid: e16f97a432ebf3f4d8624fd19d5b9b55, type: 2}
