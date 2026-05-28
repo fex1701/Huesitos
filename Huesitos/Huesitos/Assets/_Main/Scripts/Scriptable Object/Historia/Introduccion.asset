@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcb94fee521f5e94bb84af04e5abaf6c, type: 3}
   m_Name: Introduccion
   m_EditorClassIdentifier: Assembly-CSharp::VisualNovelNodeSO
-  sceneText: "Es una ma\xF1ana  brillante y vas a a la universidad, de camino a ella
-    te encuentras con tu crush "
+  sceneText: "Es una ma\xF1ana brillante y vas a la universidad. De camino a clase
+    te encuentras con tu crush. \xBFQu\xE9 haces?"
+  backgroundIndex: 0
   useLeftCharacter: 1
   leftCharacterExpression: {fileID: 11400000, guid: 728741b4e9a71704bbd1bf3fe6e7c9c9, type: 2}
   useRightCharacter: 1

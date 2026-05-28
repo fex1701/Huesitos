@@ -10,18 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fcb94fee521f5e94bb84af04e5abaf6c, type: 3}
-  m_Name: Pre desenlace
+  m_Name: desenlace 1
   m_EditorClassIdentifier: Assembly-CSharp::VisualNovelNodeSO
-  sceneText: "Terminan pasando un rato agradable hablando de videojuegos y disfrutas
-    mucho esa tarde junto a ella  ya es hora de ir a clase para despedirte \xBFque
-    haces? "
+  sceneText: "Ella no se esperaba ese beso, pero igual le gust\xF3. Te mira con ojos
+    tiernos y te dice adi\xF3s mientras se va a clase."
   backgroundIndex: 1
   useLeftCharacter: 1
-  leftCharacterExpression: {fileID: 11400000, guid: e7282092fa60bf74896100467b49f0cc, type: 2}
+  leftCharacterExpression: {fileID: 11400000, guid: 6638e6183a289b5468b5f8fccf901bd5, type: 2}
   useRightCharacter: 1
   rightCharacterExpression: {fileID: 11400000, guid: 949ee4ad2dfd22d4cb469dbadfb4293d, type: 2}
-  choices:
-  - buttonText: Beso mejilla
-    nextNode: {fileID: 11400000, guid: b88c888640b572341872100e800977ba, type: 2}
-  - buttonText: 'Abrazo '
-    nextNode: {fileID: 11400000, guid: 35b790808a25f4540bc2bb63b6c14f9e, type: 2}
+  choices: []

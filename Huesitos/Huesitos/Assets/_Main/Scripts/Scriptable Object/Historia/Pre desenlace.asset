@@ -10,16 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fcb94fee521f5e94bb84af04e5abaf6c, type: 3}
-  m_Name: Desarrolo
+  m_Name: Pre desenlace
   m_EditorClassIdentifier: Assembly-CSharp::VisualNovelNodeSO
-  sceneText: Genial le hablaste o si la ignoraste ella igualmente se acerco ahora
-    estan Conversando de que tema eligues hablarle
+  sceneText: "Terminan pasando un rato agradable hablando de videojuegos, y disfrutas
+    mucho esa tarde junto a ella. Ya es hora de ir a clase. Para despedirte, \xBFqu\xE9
+    haces?"
+  backgroundIndex: 1
   useLeftCharacter: 1
   leftCharacterExpression: {fileID: 11400000, guid: e7282092fa60bf74896100467b49f0cc, type: 2}
   useRightCharacter: 1
   rightCharacterExpression: {fileID: 11400000, guid: 949ee4ad2dfd22d4cb469dbadfb4293d, type: 2}
   choices:
-  - buttonText: VIdeojuegos
-    nextNode: {fileID: 11400000, guid: 9b33ca794b532b2408d1174465fb7c2c, type: 2}
-  - buttonText: ' cosas +18'
-    nextNode: {fileID: 11400000, guid: e16f97a432ebf3f4d8624fd19d5b9b55, type: 2}
+  - buttonText: Beso mejilla
+    nextNode: {fileID: 11400000, guid: b88c888640b572341872100e800977ba, type: 2}
+  - buttonText: 'Abrazo '
+    nextNode: {fileID: 11400000, guid: 35b790808a25f4540bc2bb63b6c14f9e, type: 2}
