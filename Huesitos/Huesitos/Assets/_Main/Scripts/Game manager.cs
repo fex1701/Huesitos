@@ -18,6 +18,10 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private SpriteCharacterController rightCharacter;
 
+    [Header("Todos los backgrounds")]
+    [SerializeField]
+    private SpriteRenderer[] backgrounds;
+
     private void Start()
     {
         LoadNode(currentNode);
@@ -27,9 +31,30 @@ public class GameManager : MonoBehaviour
     {
         currentNode = node;
 
+        // =========================
         // TEXTO
+        // =========================
+
         uiManager.SetDialogue(node.sceneText);
 
+        // =========================
+        // APAGAR TODOS LOS BACKGROUNDS
+        // =========================
+
+        for (int i = 0; i < backgrounds.Length; i++)
+        {
+            backgrounds[i].gameObject.SetActive(false);
+        }
+
+        // =========================
+        // ACTIVAR BACKGROUND DEL NODO
+        // =========================
+
+        if (node.backgroundIndex < backgrounds.Length)
+        {
+            backgrounds[node.backgroundIndex]
+                .gameObject.SetActive(true);
+        }
         // =========================
         // LEFT CHARACTER
         // =========================

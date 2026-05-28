@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Opcion incorrecta
   m_EditorClassIdentifier: Assembly-CSharp::VisualNovelNodeSO
   sceneText: 'Se enoja contigo y terminas en la carcel por ASQUEROSO '
+  backgroundIndex: 2
   useLeftCharacter: 1
   leftCharacterExpression: {fileID: 11400000, guid: b07a6360fba500e44a3ab023d39b5993, type: 2}
   useRightCharacter: 0

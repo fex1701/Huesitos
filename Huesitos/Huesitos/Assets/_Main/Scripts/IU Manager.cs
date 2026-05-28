@@ -29,7 +29,10 @@ public class UIManager : MonoBehaviour
     // CONFIGURAR BOTONES
     // =========================
 
-    public void SetupButtons(Choice[] choices, System.Action<int> callback)
+    public void SetupButtons(
+        Choice[] choices,
+        System.Action<int> callback
+    )
     {
         for (int i = 0; i < buttons.Length; i++)
         {
@@ -37,7 +40,8 @@ public class UIManager : MonoBehaviour
             {
                 buttons[i].gameObject.SetActive(true);
 
-                buttonTexts[i].text = choices[i].buttonText;
+                buttonTexts[i].text =
+                    choices[i].buttonText;
 
                 int index = i;
 

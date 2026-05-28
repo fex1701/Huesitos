@@ -66,10 +66,6 @@ public class SpriteCharacterController : MonoBehaviour
         spriteRenderers[9].sprite = _cheeksSprites[_cheeksSpriteIndex];
     }
 
-    // =========================
-    // RECIBIR DATOS DEL CHARACTER SO
-    // =========================
-
     public void ApplyCharacter(CharacterSO character)
     {
         if (character == null)

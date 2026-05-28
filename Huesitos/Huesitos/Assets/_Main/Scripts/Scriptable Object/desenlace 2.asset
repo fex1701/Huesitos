@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::VisualNovelNodeSO
   sceneText: 'Sientes lo suave de su pelo y su olor a rosas parece que ella tambien
     lo disfruta los se quedan pegados porque ninguno quiere dejar el sitio... '
+  backgroundIndex: 1
   useLeftCharacter: 1
   leftCharacterExpression: {fileID: 11400000, guid: 6638e6183a289b5468b5f8fccf901bd5, type: 2}
   useRightCharacter: 1

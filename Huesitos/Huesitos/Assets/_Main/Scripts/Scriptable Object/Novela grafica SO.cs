@@ -10,28 +10,19 @@ public class VisualNovelNodeSO : ScriptableObject
     [TextArea(3, 8)]
     public string sceneText;
 
-    // =========================
-    // PERSONAJE IZQUIERDO
-    // =========================
+    // BACKGROUND
+    public int backgroundIndex;
 
-    [Header("Left Character")]
+    // LEFT CHARACTER
     public bool useLeftCharacter;
 
     public CharacterSO leftCharacterExpression;
 
-    // =========================
-    // PERSONAJE DERECHO
-    // =========================
-
-    [Header("Right Character")]
+    // RIGHT CHARACTER
     public bool useRightCharacter;
 
     public CharacterSO rightCharacterExpression;
 
-    // =========================
     // CHOICES
-    // =========================
-
-    [Header("Choices")]
     public Choice[] choices;
 }

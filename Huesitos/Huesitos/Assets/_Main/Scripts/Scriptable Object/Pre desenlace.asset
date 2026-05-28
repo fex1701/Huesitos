@@ -15,6 +15,7 @@ MonoBehaviour:
   sceneText: "Terminan pasando un rato agradable hablando de videojuegos y disfrutas
     mucho esa tarde junto a ella  ya es hora de ir a clase para despedirte \xBFque
     haces? "
+  backgroundIndex: 1
   useLeftCharacter: 1
   leftCharacterExpression: {fileID: 11400000, guid: e7282092fa60bf74896100467b49f0cc, type: 2}
   useRightCharacter: 1
